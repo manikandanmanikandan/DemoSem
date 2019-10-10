@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Bootstrap 4, from LayoutIt!</title>
+
+	<meta name="description" content="Source code generated using layoutit.com">
+	<meta name="author" content="LayoutIt!">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<h2 style="text-align: center;color: #0072ff;margin-top: 5%;margin-bottom: 2%;">{{action}} Student Exam Result</h2>
+		
+				
+		<div class="row" style="margin-left: 30%;margin-top: 5%;">
+			<div class="col-md-12">
+				<div class=""style="
+				width: 400px;
+			">
+						<form role="form" class="">
+								<div class="form-group">
+								  <label for="exampleInputEmail1">Student ID</label>
+								  <input type="text" class="form-control" id="exampleInput1" ng-model = "semester.registerNumber" placeholder="Student ID" ng-minlength="1" ng-maxlength="9" ng-disabled = "action == 'View'">
+								</div>
+								<div class="form-group">
+										<label for="exampleInputEmail1">Student Name</label>
+										<input type="text" class="form-control" id="exampleInput2" ng-model = "semester.name" placeholder="Student Name" ng-minlength="1" ng-maxlength="50" ng-disabled = "action == 'View'">
+									  </div>
+									  <div class="form-group">
+											<label for="exampleInputEmail1">Mark 1</label>
+											<input type="number" class="form-control" id="exampleInput3" ng-model = "semester.markOne" ng-change = "markCalculate(semester)" placeholder="Mark 1" ng-minlength="1" ng-maxlength="3" ng-disabled = "action == 'View'">
+										  </div>
+										  <div class="form-group">
+												<label for="exampleInputEmail1">Mark 2</label>
+												<input type="number" class="form-control" id="exampleInput4" ng-model = "semester.markTwo" ng-change = "markCalculate(semester)" placeholder="Mark 2" ng-minlength="1" ng-maxlength="3" ng-disabled = "action == 'View'">
+											  </div>
+											  <div class="form-group">
+													<label for="exampleInputEmail1">Mark 3</label>
+													<input type="number" class="form-control" id="exampleInput5" ng-model = "semester.markThree" ng-change = "markCalculate(semester)" placeholder="Mark 3" ng-minlength="1" ng-maxlength="3" ng-disabled = "action == 'View'">
+												  </div>
+
+						<div class="form-group">
+							<label for="exampleInputEmail1">Total</label> <input
+								type="text" class="form-control" id="exampleInput5" ng-model = "semester.totalMark"
+								placeholder="Total" ng-disabled = "true">
+						</div>
+
+						<div class="form-group">
+							<label for="exampleInputEmail1">Average</label> <input
+								type="text" class="form-control" id="exampleInput6" ng-model = "semester.average"
+								placeholder="Average" ng-disabled = "true">
+						</div>
+
+
+						<button type="submit" class="btn btn-danger" ng-click = "cancel()">Cancel</button>
+								<button type="submit" class="btn btn-success" ng-if = "action == 'Add'" ng-click = "submit()">Submit</button>
+																<button type="submit" class="btn btn-success" ng-if = "action == 'Edit'" ng-click = "submit()">Update</button>
+								
+							  </form>
+				</div>
+							
+					
+			</div>
+		</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>

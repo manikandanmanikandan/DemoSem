@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+	<div class="container-fluid">
+		<h2 style="text-align: center;color: #0072ff;margin-top: 5%;margin-bottom: 2%;">Students Exam Results</h2>
+		<div class="row">
+				<div class="col-md-12">
+						<div class="btn-group" role="group" style="
+						margin-bottom: 2%;
+						float: right;
+					">
+							 <button class="btn btn-danger" type="button" ng-click = "deleted()">
+									Delete
+								</button> 
+								<button class="btn btn-warning" type="button" ng-click = "view()">
+										View
+									</button> 
+							<button class="btn btn-info" type="button" ng-click = "edit()">
+								Edit
+							</button> 
+							<button class="btn btn-primary" type="button" ng-click = "create()">
+								Create 
+							</button> 
+							
+						</div> 
+		</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-bordered table-sm" ng-table="">
+							<thead>
+								<tr>
+									<th class="text-center">
+										#
+									</th>
+									<th class="text-center">
+										Student ID
+									</th>
+									<th class="text-center">
+										Student Name
+									</th>
+									<th class="text-center">
+										Mark 1
+									</th >
+									<th class="text-center">
+										Mark 2
+									</th>
+									<th class="text-center">
+										Mark 3
+									</th>
+									<th class="text-center">
+										Total
+									</th>
+									<th class="text-center">
+										Average
+									</th>
+									<th class="text-center">
+											Select
+										</th>
+
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="studentMark in studentMarkList">
+									<td class="text-center">
+										{{$index + 1}}
+									</td>
+									<td class="text-center">
+											{{studentMark.registerNumber}}
+										</td>
+									<td>
+										{{studentMark.name}}
+									</td>
+									<td class="text-center"> 
+										{{studentMark.markOne}}
+									</td>
+									<td class="text-center">
+										{{studentMark.markTwo}}
+									</td>
+									<td class="text-center">
+											{{studentMark.markThree}}
+										</td>
+										<td class="text-center">
+												{{studentMark.totalMark}}
+											</td>
+											<td class="text-center">
+													{{studentMark.average}}
+												</td>
+												<td align="center"><!-- <label>
+														<input  id="{{$index}}"   type="radio" ng-click = "selectStudent(studentMark.id)" />
+													</label> -->
+													<label class="form-check-label"> <input
+											type="radio" id="{{$index}}" class="form-check-input"
+											name="optradio" ng-click="selectStudent(studentMark.id)"></label>
+
+									</td>
+								</tr>
+								
+
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>
